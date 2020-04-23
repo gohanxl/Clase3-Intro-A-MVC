@@ -1,0 +1,49 @@
+﻿@model List<Entidades.Empleado>
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista</title>
+</head>
+<body>
+    <div> 
+        <div>
+            <a href="/Empleado/Crear">Crear</a>
+        </div>
+        <table>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+
+            @foreach (Entidades.Empleado emp in Model)
+            {
+        <tr>
+            <td>
+                @emp.Nombre
+            </td>
+
+            <td>
+                @emp.Apellido
+            </td>
+            <td>
+                <a href="/Empleado/Modificar/@emp.Id">Modificar</a>
+            </td>
+            <td>
+                <a href="/Empleado/Eliminar/@emp.Id">Eliminar</a>
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>
