@@ -1,0 +1,49 @@
+﻿@model List<Entidades.Producto>
+@{
+    Layout = null;
+
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Lista</title>
+</head>
+<body>
+    <div> 
+        <div>
+            <a href="/Producto/Crear">Crear</a>
+        </div>
+        <table>
+            <tr>
+                <th>Descripcion</th>
+                <th>Precio</th>
+                <th>Modificar</th>
+                <th>Eliminar</th>
+            </tr>
+
+            @foreach (Entidades.Producto producto in Model)
+            {
+        <tr>
+            <td>
+                @producto.Descripcion
+            </td>
+
+            <td>
+                @producto.Precio
+            </td>
+            <td>
+                <a href="/Producto/Modificar/@producto.Id">Modificar</a>
+            </td>
+            <td>
+                <a href="/Producto/Eliminar/@producto.Id">Eliminar</a>
+            </td>
+        </tr>
+            }
+
+        </table>
+    </div>
+</body>
+</html>

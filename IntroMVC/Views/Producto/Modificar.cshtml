@@ -1,0 +1,24 @@
+﻿@model Entidades.Producto
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Modificar</title>
+</head>
+<body>
+    <div>
+        <form action="/Producto/Modificar" method="post">
+            <input type="hidden" name="Id" value="@Model.Id" />
+            Descripcion: <input type="text" name="Descripcion" value="@Model.Descripcion" />
+            Precio: <input type="number" name="Precio" value="@Model.Precio" />
+
+            <input type="submit" value="Guardar" />
+        </form>
+    </div>
+</body>
+</html>

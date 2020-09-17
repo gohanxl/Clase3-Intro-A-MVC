@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Crear</title>
+</head>
+<body>
+    <div>
+        @*<form action="/Producto/CrearConRequest" method="post">*@
+        @*<form action="/Producto/CrearConFormCollection" method="post">*@
+        <form action="/Producto/Crear" method="post">
+            Descripcion: <input type="text" name="Descripcion" />
+            Precio: <input type="number" name="Precio" />
+
+            <input type="submit" value="Crear" />
+        </form>
+    </div>
+</body>
+</html>
